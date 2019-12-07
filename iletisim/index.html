@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US"><head profile="http://gmpg.org/xfn/11"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Doğanevler Diş Polikliniği  » İletişim</title><link rel="stylesheet" href="http:s//dogadispol.com/contents/themes/wp-coda/style.compressed.css" type="text/css" media="screen"><script src="http:s//dogadispol.com/contents/themes/wp-coda/script/global.js" type="text/javascript"></script><script type="text/javascript">
+$(document).ready(function() {
+	// preload all images found in stylesheet (this preloads the coda popup)
+	$.preloadCssImages();
+	// wp-coda wordpress gallery magic
+	$(".gallery a").fancybox({
+		'hideOnContentClick': true
+	});
+	// header navigation fade-in/fade-out
+	$('.fadeThis').append('<span class="hover">').each(function () {
+		var $span = $('> span.hover', this).css('opacity', 0);
+		$(this).hover(function () {
+			$span.stop().fadeTo(250, 1);
+		}, function () {
+			$span.stop().fadeTo(250, 0);
+		});
+	});
+});
+
+</script><script>
+		function trace(msg) {
+			function var_dump(arr, level) {
+				var dumped_text = "";
+				if (!level)
+					level = 0;
+
+				//The padding given at the beginning of the line.
+				var level_padding = "";
+				for ( var j = 0; j < level + 1; j++ )
+					level_padding += "    ";
+
+				if ( 'object' === typeof(arr) ) { //Array/Hashes/Objects
+					for ( var item in arr ) {
+						var value = arr[item];
+
+						if ( 'object' === typeof(value) ) { //If it is an array,
+							dumped_text += level_padding + "'" + item + "' ...\n";
+							dumped_text += var_dump(value, level + 1);
+						} else {
+							dumped_text += level_padding + "'" + item + "' => " + "(" + typeof(value) + ") \"" + value + "\"\n";
+						}
+					}
+				} else { //Stings/Chars/Numbers etc.
+					dumped_text = "(" + typeof(arr) + ") " + arr;
+					return dumped_text;
+				}
+				if ( 0 === level ) {
+					return '(object)' + String.fromCharCode(10) + dumped_text;
+				} else {
+					return dumped_text;
+				}
+			}
+			trace.trace_queue.push(var_dump(msg));
+		}
+		trace.trace_queue = []; // Don't pollute global namespace
+
+		// Try to keep order of operations by transmitting via queue
+		setInterval(function() {
+			if (0 === trace.trace_queue.length )
+				return;
+			var msg = trace.trace_queue.shift();
+
+			// Transmit message via XHR
+			var xmlhttp;
+			if ( window.XMLHttpRequest ) {
+				// code for IE7+, Firefox, Chrome, Opera, Safari
+				xmlhttp = new XMLHttpRequest();
+			} else {
+				// code for IE6, IE5
+				xmlhttp = new ActiveXObject( "Microsoft.XMLHTTP" );
+			}
+			var addy = window.location.toString();
+			var url = trace.getLeftMost( addy, "//" ) + "//";
+			url += trace.getLeftMost( trace.delLeftMost( addy + "/", "//"), "/") + "/ds-plugins/debug-trace/debug-trace.php";
+			xmlhttp.open( "GET", url + "?m=" + encodeURIComponent( msg.toString().substring( 0, 2000 ) ), true );
+			xmlhttp.send();
+		}, 50);
+
+		// Utility parsing functions in trace namespace
+		trace.delLeftMost = function( sSource, sFind ) {
+			for ( var i = 0; i < sSource.length; i = i + 1 ) {
+				var f = sSource.indexOf(sFind, i);
+				if ( -1 !== f ) {
+					return sSource.substr( f + sFind.length, sSource.length );
+					break;
+				}
+			}
+			return sSource;
+		};
+		trace.getLeftMost = function( sSource, sFind ) {
+			for ( var i = 0; i < sSource.length; i = i + 1 ) {
+				var f = sSource.indexOf( sFind, i );
+				if ( -1 !== f ) {
+					return sSource.substr( 0, f );
+					break;
+				}
+			}
+			return sSource;
+		};
+	</script><link rel="dns-prefetch" href="//s.w.org"><link rel="stylesheet" id="wp-block-library-css" href="http:s//dogadispol.com/inc/css/dist/block-library/style.min.css" type="text/css" media="all"><style type="text/css">
+	#wp-admin-bar-environment-notice>div,
+	#wpadminbar { background-color: #0073AA !important }
+	#wp-admin-bar-environment-notice { display: none }
+	@media only screen and (min-width: 1030px) {
+	    #wp-admin-bar-environment-notice { display: block }
+	    #wp-admin-bar-environment-notice > div > span {
+	        /*color: #EEE !important;*/
+	        font-size: 130% !important;
+	    }
+		#wpadminbar #adminbarsearch:before, #wpadminbar .ab-icon:before, #wpadminbar .ab-item:before {
+			color: #eee !important;
+		}
+	}
+	#wpadminbar .ab-empty-item,#wpadminbar a.ab-item,#wpadminbar>#wp-toolbar span.ab-label,#wpadminbar>#wp-toolbar span.noticon{color:#eee;}
+	#adminbarsearch:before,
+	.ab-icon:before,
+	.ab-item:before { color: #EEE !important }
+</style></head><body>
+
+<div id="header">
+	<h1><span>Doğanevler Diş Polikliniği</span></h1>
+	<h2><span></span></h2>
+
+	
+</div>
+
+<div id="page_header">
+	<p>WordPress + jQuery + Better Coda Slider + Bust A Theme = WP CODA</p>
+	<p>introducing WP CODA. grow beautiful blogs.</p>
+</div>
+		
+<div align="center">
+<div id="page">
+	<div id="slider">	
+		<ul class="navigation"><li><a href="#iletisim"><span>İletişim</span></a></li>
+			<li><a href="#hakkinda"><span>Hakkında</span></a></li>
+		</ul><div class="scrollButtons scrollMeLeft"><a><span>previous</span></a></div>
+		
+		<div class="scroll">
+			<div class="scrollContainer">
+				<div class="panel" id="iletisim">
+					<h3>İletişim</h3> 
+					<div align="center">
+<p>Alemdağ caddesi 287 A-2 Ümraniye İstanbul’da hizmet vermekteyiz<br>
+İletişim : 0-216-6128026</p>
+<p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3010.3760974397806!2d29.135853315718958!3d41.017027026834754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac8d2c499c1f5%3A0xba3177a5a26416ef!2sCemil+Meri%C3%A7+Mahallesi%2C+Alemda%C4%9F+Cd.+No%3A287%2C+34771+Dudullu+Osb%2F%C3%9Cmraniye%2F%C4%B0stanbul!5e0!3m2!1str!2str!4v1551883333641" width="480" height="360" frameborder="0" style="border:0" allowfullscreen></iframe></p>
+</div>
+ 
+				</div>
+				<div class="panel" id="hakkinda">
+					<h3>Hakkında</h3> 
+					<div align="center">Kliniğimizde Güliz Köken ve Serhat Köken hizmet vermektedir.</div>
+ 
+				</div>
+			</div>
+		</div>
+		
+		<div class="scrollButtons scrollMeRight"><a><span>next</span></a></div>
+		
+	</div>
+</div>
+</div>
+	
+<div id="page_footer"><div align="center">
+
+	<p>Alemdağ caddesi 287 A-2 Ümraniye İstanbul’da hizmet vermekteyiz. İletişim : 0-216-6128026 </p>
+</div></div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2423497-11', 'auto');
+  ga('send', 'pageview');
+
+</script></body></html>
